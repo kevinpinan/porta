@@ -133,12 +133,46 @@
                             
                              {{-- id="contactForm" data-sb-form-api-token="API_TOKEN"  --}}
                              <form action="https://formsubmit.co/cristoferariel2000@outlook.com" method="POST">
-                                
-                                <input type="text" name="name" required>
-                                <input type="email" name="email" required>
-                                <button type="submit">Send</button>
+                                <!-- Name input-->
+                                <div class="form-floating mb-3">
+                                <input class="form-control" id='name' name='Nombre' type="text" placeholder="Enter your name..." required="Este campo es obligatorio">
+                                <label for="name">Nombre</label>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                                </div>
+                                <!-- Email address input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id='email' name='email' type="email" placeholder="name@example.com" required="Este campo es obligatorio">
+                                <label for="email">Ingresa Email</label>
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                             <!-- Phone number input-->
+                             <div class="form-floating mb-3">
+                                <input class="form-control" id="phone" name='phone' type="tel" placeholder="(123) 456-7890" required="Este campo es obligatorio" >
+                                <label for="phone">Numero de Telefono</label>
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                            </div>
+                             <!-- Message input-->
+                             <div class="form-floating mb-3">
+                                <textarea class="form-control" id="message" name='Mensage' type="text" placeholder="Enter your message here..." style="height: 10rem" required="Este campo es obligatorio"></textarea>
+                                <label for="message">Memsaje</label>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            </div>
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3">
+                                    <div class="fw-bolder">Form submission successful!</div>
+                                    To activate this form, sign up at
+                                    <br />
+                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                </div>
+                            </div>
+                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                            <button type="submit" class="btn btn-primary btn-xl " name='Mensaje Enviado Correctamente' id="submitButton" >Enviar</button>
+                                {{-- <button type="submit">Send</button> --}}
                            </form>
-                        <form  action="https://formsubmit.co/cristoferariel2000@outlook.com" method="POST">
+
+
+                        {{-- <form  action="https://formsubmit.co/cristoferariel2000@outlook.com" method="POST">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
@@ -184,7 +218,7 @@
                             <!-- Submit Button-->
                             <button type="submit" class="btn btn-primary btn-xl disabled"  id="submitButton" >Enviar</button>
                             
-                        </form>
+                        </form> --}}
                     </div>
                 </div>
             </div>
